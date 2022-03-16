@@ -30,7 +30,7 @@ import {
   const darkTheme = createTheme({
     palette: {
       primary: {
-        main: "#fff",
+        main: "#fe3746",
       },
       type: "dark",
     },
