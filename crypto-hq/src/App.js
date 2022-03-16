@@ -3,11 +3,24 @@ import './App.css';
 import Header from './Components/Header';
 import Homepage from './Pages/Homepage';
 import CoinPage from './Pages/CoinPage';
+import { makeStyles } from "@material-ui/core";
 
 function App() {
+
+  const useStyles = makeStyles(() => ({
+    App: {
+      backgroundColor: "#121418",
+      color: "#fefbfc",
+      minHeight: '100vh',
+    }
+  }));
+
+  const classes = useStyles()
+
+
   return (
     <BrowserRouter>
-    <div>
+    <div className={classes.App}>
       <Header/>
       <Routes>
       <Route path="/" element={<Homepage/>} exact/>
