@@ -1,10 +1,20 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './Components/Header';
+import Homepage from './Pages/Homepage';
+import CoinPage from './Pages/CoinPage';
 
 function App() {
   return (
-    <div className="App">
-      poop
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" component={Homepage} />
+          <Route path="/coins/:id" component={CoinPage} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
