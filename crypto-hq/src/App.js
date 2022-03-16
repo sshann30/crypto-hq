@@ -7,13 +7,13 @@ import CoinPage from './Pages/CoinPage';
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Header />
-        <Routes>
-          <Route path="/" component={Homepage} />
-          <Route path="/coins/:id" component={CoinPage} />
-        </Routes>
-      </div>
+    <div>
+      <Header/>
+      <Routes>
+      <Route path="/" element={<Homepage/>} exact/>
+      <Route path="/coins/:id" element={<CoinPage/>} />
+      </Routes>
+    </div>
     </BrowserRouter>
   );
 }
